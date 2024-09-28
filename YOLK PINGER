@@ -1,0 +1,75 @@
+@echo off
+chcp 65001 >nul
+color 4
+cls
+
+:menu
+cls
+title Yolk Raper v0.1
+echo.
+echo.   
+echo ██╗░░░██╗░█████╗░██╗░░░░░██╗░░██╗  ██████╗░░█████╗░██████╗░███████╗██████╗░  ██╗░░░██╗░░░░█████╗░░░███╗░░
+echo ╚██╗░██╔╝██╔══██╗██║░░░░░██║░██╔╝  ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗  ██║░░░██║░░░██╔══██╗░████║░░
+echo ░╚████╔╝░██║░░██║██║░░░░░█████═╝░  ██████╔╝███████║██████╔╝█████╗░░██████╔╝  ╚██╗░██╔╝░░░██║░░██║██╔██║░░
+echo ░░╚██╔╝░░██║░░██║██║░░░░░██╔═██╗░  ██╔══██╗██╔══██║██╔═══╝░██╔══╝░░██╔══██╗  ░╚████╔╝░░░░██║░░██║╚═╝██║░░
+echo ░░░██║░░░╚█████╔╝███████╗██║░╚██╗  ██║░░██║██║░░██║██║░░░░░███████╗██║░░██║  ░░╚██╔╝░░██╗╚█████╔╝███████╗
+echo ░░░╚═╝░░░░╚════╝░╚══════╝╚═╝░░╚═╝  ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚══════╝╚═╝░░╚═╝  ░░░╚═╝░░░╚═╝░╚════╝░╚══════╝
+                                                          
+                                                    
+echo.
+echo Made by Yolk/Yolkyhorse390 
+echo.
+set /p user=Username: 
+echo.
+set /p pass=Password:
+echo.
+
+rem Change the username and password below
+if "%user%"=="member" if "%pass%"=="members11" goto success
+
+echo [!] Invalid Login. Please try again... [!]
+pause
+goto menu
+
+:success
+title .NET - Currently Logged in as [%user%]
+cls
+echo.
+echo ╔═══════════════════════════════════════════════╗
+echo ║                                               ║
+echo ║         1 - Finder                            ║
+echo ║         2 - IP Lookup                         ║ 
+echo ║         3 - Pinger                            ║
+echo ║         4 - Credits                           ║ 
+echo ║                                               ║
+echo ╚═══════════════════════════════════════════════╝
+echo.
+
+set /p a=Select an option [%user%]: 
+if "%a%"=="1" goto one
+if "%a%"=="2" goto two
+if "%a%"=="3" goto three
+if "%a%"=="4" goto four
+
+echo [!] Invalid Choice. Please try again... [!]
+pause
+goto success
+
+:one
+start C:\Users\yolk\Downloads\NetMultiTool\NetMultiTool\Grim.Reaper.v1.0.0/finder.exe
+goto success
+
+:two
+start C:\Users\yolk\Downloads\NetMultiTool\NetMultiTool\Grim.Reaper.v1.0.0/grimreaper.exe
+goto success
+
+:three
+start C:\Users\yolk\Downloads\NetMultiTool\NetMultiTool\Grim.Reaper.v1.0.0/pinger.exe
+goto success
+
+:four
+cls
+echo Made by yolk
+timeout 2 >nul
+pause
+goto success
